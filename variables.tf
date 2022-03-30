@@ -11,11 +11,16 @@ variable "vpc_cidr" {
   type        = string
   default     = "10.0.0.0/16"
 }
+variable "created" {
+  description = "instance created"
+  type        = bool
+  default     = false
+}
 
 variable "vpc_azs" {
   description = "Availability zones for VPC"
   type        = list(string)
-  default     = ["us-west-2a", "us-west-2b", "us-west-2c"]
+  default     = ["us-east-1a","us-east-1b","us-east-1c","us-east-1d","us-east-1e","us-east-1f"]
 }
 
 variable "vpc_private_subnets" {
