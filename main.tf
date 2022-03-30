@@ -60,6 +60,46 @@ module "vote_service_sg" {
       cidr_blocks = "0.0.0.0/0"
     },
   ]
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  egress_cidr_blocks      = ["10.10.0.0/16"]
+  egress_rules            = ["https-443-tcp"]
+  egress_with_cidr_blocks = [
+    {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = "0.0.0.0/0"
+
+
+    },
+    
+    {
+      rule        = "postgresql-tcp"
+      cidr_blocks = "0.0.0.0/0"
+    },
+  ]
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }
 
 

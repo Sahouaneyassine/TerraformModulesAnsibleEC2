@@ -2,5 +2,9 @@
   hosts: webservers
   become: True
   tasks:
+    - name: Upgrade all apt packages
+      apt: upgrade=dist force_apt_get=yes
+
     - name: install nginx
-      apt: name=nginx update_cache=yes
+      apt: name=nginx 
+   
